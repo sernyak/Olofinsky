@@ -31,11 +31,20 @@
             border-radius: 12px;
             box-shadow: 0 4px 15px rgba(0,0,0,0.05);
         }
+        
+        /* Адаптивна таблиця */
+        .table-wrapper {
+            overflow-x: auto;
+            -webkit-overflow-scrolling: touch;
+            margin: 20px 0;
+            border-radius: 8px;
+            border: 1px solid #eee;
+        }
         table {
             width: 100%;
             border-collapse: collapse;
-            margin: 20px 0;
             background: #fff;
+            min-width: 600px; /* Мінімальна ширина для збереження структури */
         }
         th, td {
             padding: 15px;
@@ -47,6 +56,7 @@
             color: #555;
             font-weight: 600;
         }
+        
         .brand-bluetti {
             color: #0068b5;
             font-weight: bold;
@@ -61,6 +71,7 @@
             font-weight: bold;
             border-radius: 4px;
             padding: 2px 6px;
+            display: inline-block; /* Щоб не розривалося */
         }
         .recommendation {
             display: flex;
@@ -105,7 +116,7 @@
         }
         .btn {
             display: inline-block;
-            padding: 10px 15px;
+            padding: 12px 15px;
             text-decoration: none;
             border-radius: 6px;
             font-weight: bold;
@@ -135,6 +146,36 @@
         .btn-extra:hover {
             background-color: #e0f7fa;
         }
+
+        /* Мобільна адаптація */
+        @media (max-width: 600px) {
+            body {
+                padding: 10px;
+            }
+            .container {
+                padding: 15px;
+            }
+            h1 {
+                font-size: 1.5em;
+                margin-bottom: 20px;
+            }
+            h2 {
+                font-size: 1.3em;
+                margin-top: 30px;
+            }
+            .rec-card {
+                min-width: 100%; /* Картки на всю ширину */
+            }
+            .btn {
+                width: 100%; /* Кнопки зручні для пальця */
+                box-sizing: border-box;
+                padding: 14px; /* Більша зона кліку */
+            }
+            th, td {
+                padding: 10px; /* Компактніша таблиця */
+                font-size: 0.9em;
+            }
+        }
     </style>
 </head>
 <body>
@@ -147,62 +188,68 @@
 
         <!-- Таблиця характеристик -->
         <h2>1. Технічні характеристики</h2>
-        <table>
-            <thead>
-                <tr>
-                    <th>Характеристика</th>
-                    <th class="brand-bluetti">BLUETTI AC180P</th>
-                    <th class="brand-ecoflow">EcoFlow DELTA 2</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td><strong>Орієнтовна ціна</strong></td>
-                    <td>~55 500 грн</td>
-                    <td>~38 000 грн<br><span style="font-size:0.9em; color:#666; font-weight:normal;">(+ ~23 000 грн батарея)</span></td>
-                </tr>
-                <tr>
-                    <td><strong>Ємність (Батарея)</strong></td>
-                    <td>1440 Вт·год <span class="winner">Перемога (+40%)</span></td>
-                    <td>1024 Вт·год</td>
-                </tr>
-                <tr>
-                    <td><strong>Тип батареї</strong></td>
-                    <td>LiFePO4 (3500+ циклів)</td>
-                    <td>LiFePO4 (3000+ циклів)</td>
-                </tr>
-                <tr>
-                    <td><strong>Потужність (Номінал)</strong></td>
-                    <td>1800 Вт</td>
-                    <td>1800 Вт</td>
-                </tr>
-                <tr>
-                    <td><strong>Пікова потужність</strong></td>
-                    <td>2700 Вт (Power Lifting)</td>
-                    <td>2700 Вт (X-Boost)</td>
-                </tr>
-                <tr>
-                    <td><strong>Швидкість зарядки</strong></td>
-                    <td>~1.5 год (Turbo режим)</td>
-                    <td>~1.2 год <span class="winner">Швидше</span></td>
-                </tr>
-                <tr>
-                    <td><strong>Рівень шуму</strong></td>
-                    <td><span class="winner">Тихіша (~45 дБ)</span></td>
-                    <td>Гучніша під навантаженням</td>
-                </tr>
-                <tr>
-                    <td><strong>Вага</strong></td>
-                    <td>~17 кг</td>
-                    <td>~12 кг <span class="winner">Легша</span></td>
-                </tr>
-                <tr>
-                    <td><strong>Розширення ємності</strong></td>
-                    <td>Можливе (режим Power Bank)</td>
-                    <td><span class="winner">Дуже зручне (Smart Battery)</span></td>
-                </tr>
-            </tbody>
-        </table>
+        
+        <div class="table-wrapper">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Характеристика</th>
+                        <th class="brand-bluetti">BLUETTI AC180P</th>
+                        <th class="brand-ecoflow">EcoFlow DELTA 2</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>Орієнтовна ціна</strong></td>
+                        <td>~55 500 грн</td>
+                        <td>~38 000 грн<br><span style="font-size:0.9em; color:#666; font-weight:normal;">(+ ~23 000 грн батарея)</span></td>
+                    </tr>
+                    <tr>
+                        <td><strong>Ємність (Батарея)</strong></td>
+                        <td>1440 Вт·год <span class="winner">Перемога (+40%)</span></td>
+                        <td>1024 Вт·год</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Тип батареї</strong></td>
+                        <td>LiFePO4 (3500+ циклів)</td>
+                        <td>LiFePO4 (3000+ циклів)</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Потужність (Номінал)</strong></td>
+                        <td>1800 Вт</td>
+                        <td>1800 Вт</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Пікова потужність</strong></td>
+                        <td>2700 Вт (Power Lifting)</td>
+                        <td>2700 Вт (X-Boost)</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Швидкість зарядки</strong></td>
+                        <td>~1.5 год (Turbo режим)</td>
+                        <td>~1.2 год <span class="winner">Швидше</span></td>
+                    </tr>
+                    <tr>
+                        <td><strong>Рівень шуму</strong></td>
+                        <td><span class="winner">Тихіша (~45 дБ)</span></td>
+                        <td>Гучніша під навантаженням</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Вага</strong></td>
+                        <td>~17 кг</td>
+                        <td>~12 кг <span class="winner">Легша</span></td>
+                    </tr>
+                    <tr>
+                        <td><strong>Розширення ємності</strong></td>
+                        <td>Можливе (режим Power Bank)</td>
+                        <td><span class="winner">Дуже зручне (Smart Battery)</span></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <p style="text-align: center; font-size: 0.85em; color: #666; margin-top: -10px;">
+            <i>* Прокрутіть таблицю вправо, щоб побачити більше</i>
+        </p>
 
         <!-- Детальний аналіз -->
         <h2>2. Детальний аналіз</h2>
