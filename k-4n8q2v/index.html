@@ -194,6 +194,23 @@ h2 {
   max-width: 62ch;
 }
 
+.audience {
+  grid-column: 1 / -1;
+  font-size: 14px;
+  line-height: 1.55;
+  color: var(--ink-soft);
+  margin: 10px 0 0;
+  padding: 10px 14px;
+  border-left: 2px solid var(--accent);
+  background: var(--warn-bg);
+  border-radius: 0 3px 3px 0;
+  max-width: 66ch;
+}
+.audience b {
+  color: var(--ink);
+  font-weight: 700;
+}
+
 .entry a.addr {
   font-family: 'JetBrains Mono', ui-monospace, monospace;
   font-size: 12.5px;
@@ -342,7 +359,7 @@ footer {
 
   <div class="checked">
     <span>перевірено запитом 6 вересня 2026</span>
-    <span>12 адрес · <b>усі віддають 200</b></span>
+    <span>11 адрес · <b>усі віддають 200</b></span>
   </div>
 
   <!-- ========== ДОКУМЕНТИ ========== -->
@@ -375,6 +392,12 @@ footer {
           <span>оновлено 01.09.2026</span>
           <span>вихідник docs/try-kroky.html</span>
         </p>
+        <p class="audience">
+          <b>Кому і коли.</b> Для першого знайомства з ідеєю. Читається за
+          пʼять хвилин і відповідає на одне питання — чи взагалі рухаємось у цей
+          бік. Свідомо без цифр і розрахунків, щоб перша розмова була про
+          напрямок, а не про числа.
+        </p>
       </div>
 
       <div class="entry">
@@ -393,6 +416,12 @@ footer {
           <span>оновлено 06.09.2026</span>
           <span>вихідник docs/prezentatsiya.html</span>
         </p>
+        <p class="audience">
+          <b>Кому і коли.</b> Для розмови віч-на-віч, коли є кому пояснювати.
+          Слайди — супровід до усного пояснення, а не самостійний текст: якщо
+          гортати їх наодинці, лишиться набір тез без звʼязків між ними.
+          Не документ, який дають почитати.
+        </p>
       </div>
 
       <div class="entry">
@@ -408,8 +437,14 @@ footer {
         </p>
         <p class="meta">
           <span>&#8776; 4 100 слів · 24 хв</span>
-          <span>оновлено 05.09.2026</span>
+          <span>оновлено 06.09.2026</span>
           <span>вихідник docs/shlyah-do-konsultatsii.html</span>
+        </p>
+        <p class="audience">
+          <b>Кому і коли.</b> Для самостійного читання з телефона, у власному
+          темпі. Єдиний із трьох, розрахований на те, що людина читає його сама,
+          без коментаря поруч. Двадцять чотири хвилини — це не для розмови, а
+          щоб було куди повернутись і перечитати потрібне місце.
         </p>
       </div>
 
@@ -568,32 +603,6 @@ footer {
         </p>
       </div>
 
-    </div>
-  </section>
-
-  <!-- ========== СТОРОННЄ ========== -->
-  <section>
-    <div class="sec-head">
-      <h2>Стороннє на домені</h2>
-      <span class="count">1 сторінка</span>
-    </div>
-
-    <div class="register register--foreign">
-      <div class="entry">
-        <h3 class="entry-name">BLUETTI AC180P vs EcoFlow DELTA 2</h3>
-        <div class="addr-line">
-          <a class="addr" href="https://sernyak.github.io/Olofinskiy/ChargeStations.html" target="_blank" rel="noopener">sernyak.github.io/Olofinskiy/ChargeStations.html</a>
-        </div>
-        <span class="chip">не з цього проєкту</span>
-        <p class="entry-what">
-          Порівняння зарядних станцій. До проєкту не має жодного стосунку —
-          потрапило в репозиторій ще до того, як він став сайтом.
-        </p>
-        <p class="meta">
-          <span>оновлено 27.12.2025</span>
-          <span>кандидат на видалення</span>
-        </p>
-      </div>
     </div>
   </section>
 
